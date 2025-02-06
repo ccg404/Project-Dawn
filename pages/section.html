@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Gloria+Hallelujah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="bg-[url(/img/bg1.jpg)] object-cover h-screen flex flex-col items-center justify-center"
+    >
+      <div class="p-5 mb-10">
+        <p class="text-3xl leading-loose text-center font-bold font-gloria p-5">
+          Will you be this man's Valentine?
+        </p>
+      </div>
+      <div class="p-10">
+        <h1 id="message" class="text-6xl font-gloria text-black text-center"></h1>
+      </div>
+      <div class="m-10 flex flex-row gap-10 font-gloria">
+        <button class="p-4 px-10 bg-black text-white rounded-md shadow-xl" id="btn1">
+          <a href="/pages/message.html">Yes</a>
+        </button>
+        <button
+          class="p-4 px-10 bg-black text-white rounded-md shadow-xl"
+          id="btn2"
+        >
+          <a href="">No</a>
+        </button>
+      </div>
+    </div>
+    <script>
+      const message = document.getElementById("message");
+      const btnYes = document.getElementById('btn1')
+      const messages = [
+        "Bruhhh???",
+        "Are you sure? 🥺",
+        "Think again... 😢",
+        "Please? 😭",
+        "You're breaking my heart 💔",
+        "Fine... 😔",
+        "Stop",
+        "The more you no",
+      ];
+      let index = 0;
+      let scale = 1;
+      document.getElementById("btn2").onclick = () => {
+        event.preventDefault();
+        message.innerHTML = messages[index];
+        index = (index + 1) % messages.length
+
+        scale += 0.2;
+        btnYes.style.transform = `scale(${scale})`;
+      };
+    </script>
+  </body>
+</html>

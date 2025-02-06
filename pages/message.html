@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Gloria+Hallelujah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="bg-[url(/img/bg1.jpg)] bg-contain h-auto flex flex-col items-center justify-center gap-10"
+    >
+      <div class="p-5 m-10">
+        <h1 class="text-3xl text-center font-bold font-gloria leading-16 mb-10">
+          GREAT!!!
+        </h1>
+        <p class="font-gloria text-lg text-center">
+          Since we can't celebrate it today, here's something to make your day
+          special
+        </p>
+      </div>
+      <!--Letter Section-->
+      <!-- Letter Section -->
+      <div class="mt-20 font-gloria relative flex flex-col items-center">
+        <p class="text-3xl font-bold">Here's a letter for you</p>
+        <div class="relative w-full flex justify-center mt-10">
+          <!-- Added relative positioning -->
+          <div class="container relative">
+            <div class="envelope-wrapper relative">
+              <div class="envelope">
+                <div class="letter">
+                  <div class="text">
+                    <strong>Dear Programmers,</strong>
+                    <p>
+                      I hope you are having a good day today! Just know that I
+                      commend all of you, and your work as programmers is
+                      greatly appreciated!
+                    </p>
+                    <p class="sincerely">Sincerely, Dwyane <3</p>
+                  </div>
+                </div>
+              </div>
+              <div class="heart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Music Section-->
+      <div class="mt-20 font-gloria p-10">
+        <p class="text-xl font-bold text-center">
+          Whenever I listen to this song, your the first thing that pops up to
+          my mind
+        </p>
+      </div>
+      <!--My Song Section-->
+      <div class="mt-20 font-gloria p-10">
+        <p class="text-3xl font-bold text-center">
+          Click the VHS Tape and use headphones
+        </p>
+      </div>
+    </div>
+    <script>
+      const envelope = document.querySelector(".envelope-wrapper");
+      envelope.addEventListener("click", () => {
+        envelope.classList.toggle("flap");
+      });
+    </script>
+  </body>
+</html>
