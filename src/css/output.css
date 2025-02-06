@@ -814,6 +814,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1462,6 +1465,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab,;
@@ -2382,6 +2388,9 @@ body {
 .flap > .heart {
   transform: rotate(90deg);
   transition-delay: 0.4s;
+}
+#btn2 {
+  transition: transform 0.3s ease-in-out;
 }
 @keyframes spin {
   to {

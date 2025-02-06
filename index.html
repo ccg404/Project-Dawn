@@ -15,9 +15,26 @@
             <h1 class="text-3xl text-center font-bold font-gloria leading-16">Would you like to play a game?</h1>
         </div>
         <div class="m-10 flex flex-row gap-10 font-gloria">
-            <button class="p-4 px-10 bg-black text-white rounded-md shadow-xl"><a href="/pages/section.html">Yes</a></button>
-            <button class="p-4 px-10 bg-black text-white rounded-md shadow-xl"><a href="">No</a></button>
+            <button class="p-4 px-10 bg-white text-black font-bold rounded-md shadow-xl" id="btn1"><a href="/pages/section.html">Yes</a></button>
+            <button class="p-4 px-10 bg-black text-white rounded-md shadow-xl" id="btn2"><a href="">No</a></button>
         </div>
     </div>
+    <script>
+        let scale = 1;
+
+        const btnYes = document.getElementById('btn1');
+        const btnNo = document.getElementById('btn2');
+
+        document.getElementById('btn2').onclick = () =>{
+            event.preventDefault();
+            scale += 0.2;
+            btnYes.style.transform = `scale(${scale})`;
+
+            const randomX = Math.random() * 200 - 100;
+            const randomY = Math.random() * 100- 50;
+
+            btnNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+    </script>
 </body>
 </html>

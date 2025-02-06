@@ -22,10 +22,16 @@
         </p>
       </div>
       <div class="p-10">
-        <h1 id="message" class="text-6xl font-gloria text-black text-center"></h1>
+        <h1
+          id="message"
+          class="text-6xl font-gloria text-black text-center"
+        ></h1>
       </div>
       <div class="m-10 flex flex-row gap-10 font-gloria">
-        <button class="p-4 px-10 bg-black text-white rounded-md shadow-xl" id="btn1">
+        <button
+          class="p-4 px-10 bg-white text-black font-bold rounded-md shadow-xl"
+          id="btn1"
+        >
           <a href="/pages/message.html">Yes</a>
         </button>
         <button
@@ -38,7 +44,8 @@
     </div>
     <script>
       const message = document.getElementById("message");
-      const btnYes = document.getElementById('btn1')
+      const btnYes = document.getElementById("btn1");
+      const btnNo = document.getElementById("btn2");
       const messages = [
         "Bruhhh???",
         "Are you sure? 🥺",
@@ -48,16 +55,24 @@
         "Fine... 😔",
         "Stop",
         "The more you no",
+        "Seryoso tho stop",
+        "loveeee naman ehhhh",
+        "aight",
       ];
       let index = 0;
       let scale = 1;
       document.getElementById("btn2").onclick = () => {
         event.preventDefault();
         message.innerHTML = messages[index];
-        index = (index + 1) % messages.length
+        index = (index + 1) % messages.length;
 
         scale += 0.2;
         btnYes.style.transform = `scale(${scale})`;
+
+        const randomX = Math.random() * 200 - 100;
+        const randomY = Math.random() * 100 - 50;
+
+        btnNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
       };
     </script>
   </body>

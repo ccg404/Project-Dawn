@@ -143,3 +143,7 @@ body {
   transform: rotate(90deg);
   transition-delay: 0.4s;
 }
+
+#btn2 {
+  transition: transform 0.3s ease-in-out;
+}
