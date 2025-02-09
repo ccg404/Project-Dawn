@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/css/output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Gloria+Hallelujah&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div
-      class="bg-[url(/img/bg1.jpg)] bg-contain h-auto flex flex-col items-center justify-center gap-10"
-    >
-      <div class="p-5 m-10">
-        <h1 class="text-3xl text-center font-bold font-gloria leading-16 mb-10">
-          GREAT!!!
-        </h1>
-        <p class="font-gloria text-lg text-center">
-          Since we can't celebrate it today, here's something to make your day
-          special
-        </p>
-      </div>
-      <!--Letter Section-->
-      <!-- Letter Section -->
-      <div class="mt-20 font-gloria relative flex flex-col items-center">
-        <p class="text-3xl font-bold">Here's a letter for you</p>
-        <div class="relative w-full flex justify-center mt-10">
-          <!-- Added relative positioning -->
-          <div class="container relative">
-            <div class="envelope-wrapper relative">
-              <div class="envelope">
-                <div class="letter">
-                  <div class="text">
-                    <strong>Dear Programmers,</strong>
-                    <p>
-                      I hope you are having a good day today! Just know that I
-                      commend all of you, and your work as programmers is
-                      greatly appreciated!
-                    </p>
-                    <p class="sincerely">Sincerely, Dwyane <3</p>
-                  </div>
-                </div>
-              </div>
-              <div class="heart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <link rel="stylesheet" href="/src/css/output.css">
+</head>
+<body class="overflow-hidden">
+    <!--Need to fix the open and close function of the letter-->
+    <div class="bg-[url(/img/bg1.jpg)] h-screen flex flex-col justify-center items-center gap-10">
 
-      <!--Music Section-->
-      <div class="mt-20 font-gloria p-10">
-        <p class="text-xl font-bold text-center">
-          Whenever I listen to this song, you're the first thing that pops up to
-          my mind
-        </p>
-      </div>
-      <!--My Song Section-->
-      <div class="mt-20 font-gloria p-10">
-        <p class="text-3xl font-bold text-center">
-          Click the VHS Tape and use headphones
-        </p>
-      </div>
+        <div class="font-gloria w-[250px]">
+            <h1 class="font-bold text-3xl">Here's a letter I wrote for u </h1>
+        </div>
+
+        <div id="envelope wrapper" class="font-gloria relative flex flex-col items-center">
+
+            <div id="envelope" class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center">
+
+                <div id="letter" class="absolute w-[300px] h-[180px] bg-white rounded-md shadow-lg p-5 text-xl text-black text-center 
+                transition-transform duration-500 ease-in-out">
+                    <p>Hi there, <br>Happy Valentines Day</p>
+                </div>
+
+                <div class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center  border-l-[175px] border-l-transparent 
+                border-r-[175px] border-r-transparent  border-t-[100px] border-t-pink-400 ">
+
+                </div>
+
+                <div id="envelope-flap" class="absolute top-0 left-0 w-0 h-0 
+                border-l-[175px] border-l-transparent 
+                border-r-[175px] border-r-transparent 
+                border-t-[135px] border-t-pink-400 
+                transition-transform duration-700 ease-in-out origin-top transform">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="button wrapper" class="font-gloria flex flex-col gap-5">
+            <button id="btnOpen" class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold">Open letter</button>
+            <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold"><a href="/pages/musicPage.html">Next gift</a></button>
+        </div>
     </div>
     <script>
-      const envelope = document.querySelector(".envelope-wrapper");
-      envelope.addEventListener("click", () => {
-        envelope.classList.toggle("flap");
-      });
+       document.getElementById('btnOpen').onclick = () => {
+    const flap = document.getElementById('envelope-flap');
+    const letter = document.getElementById('letter');
+    // Toggle open state
+    const isOpen = flap.getAttribute("data-open") === "true";
+    if (isOpen) {
+        // Close the envelope
+        flap.style.transform = "rotateX(0deg)";
+        letter.style.transform = "translateY(120%)"; // Move letter back down
+        letter.style.opacity = "0"; // Hide letter smoothly
+        setTimeout(() => {
+            letter.style.zIndex = "0"; // Move letter behind the flap after animation
+        }, 500); // Ensure zIndex change happens after animation
+        flap.setAttribute("data-open", "false"); // Update state
+    } else {
+        // Open the envelope
+        flap.style.transform = "rotateX(180deg)";
+        letter.style.transform = "translateY(-20px)"; // Slide letter up
+        letter.style.opacity = "1"; // Show letter
+        letter.style.zIndex = "10"; // Bring letter to front
+        flap.setAttribute("data-open", "true"); // Update state
+    }
+};
     </script>
-  </body>
+</body>
 </html>

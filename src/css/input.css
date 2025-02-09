@@ -5,145 +5,198 @@
   --font-gloria: "Gloria Hallelujah", "cursive";
 }
 
-:root {
-  --primary: white;
-  --bg-color: #254336;
-  --bg-envelope-color: #f5edd1;
-  --envelope-tab: #ecdeb8;
-  --envelope-cover: #e6cfa7;
-  --shadow-color: #1c1c1c;
-  --heart-color: #c2465d;
-}
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: var(--bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.container {
-  height: auto; /* Change from 100vh to auto */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack content properly */
-  margin-top: 20px; /* Adjust spacing */
-}
-.envelope-wrapper {
-  position: relative; /* Ensure it stays within section */
-  margin-top: 20px; /* Add space below heading */
-}
-.envelope {
-  position: relative;
-  width: 350px;
-  height: 250px;
-}
 
-.container > .envelope-wrapper {
-  background: var(--bg-envelope-color);
-  box-shadow: 0 0 40px var(--shadow-color);
-}
-.envelope-wrapper > .envelope {
-  position: relative;
-  width: 350px;
-  height: 250px;
-}
-.envelope-wrapper > .envelope::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  border-top: 130px solid var(--envelope-tab);
-  border-right: 175px solid transparent;
-  border-left: 175px solid transparent;
-  transform-origin: top;
-  transition: all 0.5s ease-in-out 0.7s;
-}
-.envelope-wrapper > .envelope::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 0px;
-  height: 0px;
-  border-top: 130px solid transparent;
-  border-right: 175px solid var(--envelope-cover);
-  border-bottom: 120px solid var(--envelope-cover);
-  border-left: 175px solid var(--envelope-cover);
-}
-.sincerely {
-  text-align: right;
-}
 
-.envelope > .letter {
-  position: absolute;
-  right: 20%;
-  bottom: 0;
-  width: 54%;
-  height: 80%;
-  background: var(--primary);
-  text-align: center;
-  transition: all 1s ease-in-out;
-  box-shadow: 0 0 5px var(--shadow-color);
-  padding: 20px 10px;
+/*
+ For the music player
+*/
+h1
+{
+  text-align:center;
 }
-
-.envelope > .letter > .text {
-  font-family: "Caveat", cursive;
-  font-style: normal;
-  color: var(--txt-color);
-  text-align: justify;
-  font-size: 11px;
-  padding-right: 2px;
+.music-player
+{
+    height:200px;
+    width: 250px;
+    border: 5px solid #242121;
+    border-radius: 5px;
+    background-color: #BC9E85;
+    margin:50px auto;
 }
-
-.text strong {
-  font-size: 12px;
+.left
+{
+    float: left;
+    width: 70%;
+    position: relative
 }
-
-.heart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  background: var(--heart-color);
-  z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg);
-  transition: transform 0.5s ease-in-out 1s;
-  box-shadow: 0 1px 6px var(--shadow-color);
-  cursor: pointer;
+.right
+{
+    float: right;
+    width: 30%;
+    position: relative
 }
-.heart:before,
-.heart:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: var(--heart-color);
-  border-radius: 50%;
+.cd
+{
+    height: 150px;
+    width: 150px;
+    border: 4px solid #242121;
+    border-radius: 50%;
+    background-color: #7C8697;
+    margin:10px 0 0 10px;
+    transition:all .3s ease-in-out;
+    position:relative
 }
-.heart:before {
-  top: -7.5px;
+.circle
+{
+    height: 15px;
+    width: 15px;
+    float: left;
+    border: 3px solid #242121;
+    border-radius: 50%;
+    background-color: #fff;
+    margin:7px 0 0 7px;
+   position:absolute
 }
-.heart:after {
-  right: 7.5px;
+.cd-right
+{
+    height: 100px;
+    width: 83px;
+    border: 4px solid #ddd;
+    border-color: transparent #242121 transparent transparent;
+    border-radius: 0 55px 63px 0;
+    margin: 25px 0px 0px 50px;
+   position:absolute
 }
-.flap > .envelope:before {
-  transform: rotateX(180deg);
-  z-index: 0;
+.cd-right-small
+{
+    height: 63px;
+    width: 70px;
+    border: 4px solid #ddd;
+    border-color: transparent #242121 transparent transparent;
+    border-radius: 0 55px 63px 0;
+    margin: 45px 0px 0px 50px;
+    position:absolute
 }
-.flap > .envelope > .letter {
-  bottom: 100px;
-  transform: scale(1.5);
-  transition-delay: 1s;
+.cd-left
+{
+    height: 100px;
+    width: 80px;
+    border: 4px solid #ddd;
+    border-color: transparent transparent transparent #242121;
+    border-radius: 55px 0 0 63px;
+    margin: 25px 0px 0px 12px;
+    position:absolute
 }
-.flap > .heart {
-  transform: rotate(90deg);
-  transition-delay: 0.4s;
+.cd-left-small
+{
+    height: 63px;
+    width: 70px;
+    border: 4px solid #ddd;
+    border-color: transparent transparent transparent #242121;
+    border-radius: 55px 0 0 63px;
+    margin: 42px 0px 0px 25px;
+   position:absolute
 }
-
-#btn2 {
-  transition: transform 0.3s ease-in-out;
+.cd-circle
+{
+    height: 15px;
+    width: 15px;
+    float: left;
+    border: 4px solid #242121;
+    border-radius: 50%;
+    background-color: #BC9E85;
+    margin: 64px 0 0 65px;
+    position:absolute
+}
+.cd hr
+{
+    width: 40px;
+    display: inline-block;
+    height: 5px;
+    background-color: #242121;
+    border: 0;
+    border-radius: 5px;
+    margin: 170px 0 0 4px;
+}
+.player
+{
+    position: absolute;
+    margin-top:20px
+}
+.player .p-circle
+{
+    height: 13px;
+    width: 13px;
+    border: 3px solid #242121;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 1px 0 0 40px;
+    position:absolute
+  
+}
+.player .first
+{
+    width: 20px;
+    height: 4px;
+    background-color: #242121;
+    border: 0;
+    margin: 20px 0 0 27px;
+    position: absolute;
+    transform: rotate(-45deg);
+    border-radius: 5px
+}
+.secound
+{
+    background-color: #242121;
+    border: 0;
+    margin: 60px 0px 0px -4px;
+    height: 4px;
+    width: 70px;
+    transform: rotate(90deg);
+}
+.third
+{
+    width: 20px;
+    height: 4px;
+    background-color: #242121;
+    border: 0;
+    margin: 36px 0 0 15px;
+    position: absolute;
+    transform: rotate(-45deg);
+    border-radius: 5px
+}
+.square
+{
+    height: 10px;
+    width: 20px;
+    border: 4px solid #242121;
+    background-color: #fff;
+     transform: rotate(-45deg);
+    border-radius: 5px;
+    margin: 42px 0 0 -2px;
+}
+.last div
+{
+    
+    height: 15px;
+    width: 15px;
+    border: 3px solid #242121;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 137px 0px -127px 48px;
+}
+.mora
+{
+    height: 60px;
+    width: 15px;
+    border: 4px solid #242121;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: -3px 0 0 46px;
+}
+.player:hover
+{
+    margin-left: -30px;
+    transform:rotatez(30deg);
+    transition:all 1s ease-in-out;
 }
