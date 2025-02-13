@@ -1,73 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/src/css/output.css">
-</head>
-<body class="overflow-hidden">
+    <link rel="stylesheet" href="/src/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=cancel"
+    />
+  </head>
+  <body class="overflow-hidden">
     <!--Need to fix the open and close function of the letter-->
-    <div class="bg-[url(/img/bg1.jpg)] h-screen flex flex-col justify-center items-center gap-10">
+    <div
+      class="bg-[url(/img/bg1.jpg)] h-screen flex flex-col justify-center items-center gap-10"
+    >
+      <div class="font-gloria w-[250px]">
+        <h1 class="text-3xl font-bold">Here's a letter I wrote for u</h1>
+      </div>
 
-        <div class="font-gloria w-[250px]">
-            <h1 class="font-bold text-3xl">Here's a letter I wrote for u </h1>
-        </div>
+      <div
+        id="envelope wrapper"
+        class="font-gloria relative flex flex-col items-center"
+      >
+        <div class="relative">
+          <div
+            id="envelope-flap"
+            class="absolute top-0 left-0 w-0 h-0 border-l-[175px] border-l-transparent border-r-[175px] border-r-transparent border-t-[135px] border-t-pink-400 transition-transform duration-700 ease-in-out origin-top transform"
+          ></div>
 
-        <div id="envelope wrapper" class="font-gloria relative flex flex-col items-center">
-
-            <div id="envelope" class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center">
-
-                <div id="letter" class="absolute w-[300px] h-[180px] bg-white rounded-md shadow-lg p-5 text-xl text-black text-center 
-                transition-transform duration-500 ease-in-out">
-                    <p>Hi there, <br>Happy Valentines Day</p>
-                </div>
-
-                <div class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center  border-l-[175px] border-l-transparent 
-                border-r-[175px] border-r-transparent  border-t-[100px] border-t-pink-400 ">
-
-                </div>
-
-                <div id="envelope-flap" class="absolute top-0 left-0 w-0 h-0 
-                border-l-[175px] border-l-transparent 
-                border-r-[175px] border-r-transparent 
-                border-t-[135px] border-t-pink-400 
-                transition-transform duration-700 ease-in-out origin-top transform">
-                </div>
-
+          <div
+            id="envelope"
+            class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center"
+          >
+            <div
+              id="letter"
+              class="absolute w-[350px] h-auto bg-white rounded-md shadow-lg p-5 text-xl text-black text-center transition-transform duration-500 ease-in-out overflow-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="40px"
+                viewBox="0 -960 960 960"
+                width="40px"
+                fill="#5f6368"
+                class="absolute right-0 top-0"
+                id="btnClose"
+              >
+                <path
+                  d="m332-285.33 148-148 148 148L674.67-332l-148-148 148-148L628-674.67l-148 148-148-148L285.33-628l148 148-148 148L332-285.33ZM480-80q-82.33 0-155.33-31.5-73-31.5-127.34-85.83Q143-251.67 111.5-324.67T80-480q0-83 31.5-156t85.83-127q54.34-54 127.34-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 82.33-31.5 155.33-31.5 73-85.5 127.34Q709-143 636-111.5T480-80Zm0-66.67q139.33 0 236.33-97.33t97-236q0-139.33-97-236.33t-236.33-97q-138.67 0-236 97-97.33 97-97.33 236.33 0 138.67 97.33 236 97.33 97.33 236 97.33ZM480-480Z"
+                />
+              </svg>
+              <p class="p-2 text-lg leading-5">
+                Hi Loveee, <br /><br />
+                Happy Valentine's Day! This is something new for me, but since
+                we can't see each other today, please accept these wonderful
+                gifts that I've prepared just for my favorite person. 💖
+                <br /><br />
+                I hope you have a beautiful day. Remember, I'm always here for
+                you—whenever you need anything, don't hesitate to ask. You mean
+                the world to me. ❤️
+              </p>
             </div>
-        </div>
 
-
-        <div id="button wrapper" class="font-gloria flex flex-col gap-5">
-            <button id="btnOpen" class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold">Open letter</button>
-            <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold"><a href="/pages/musicPage.html">Next gift</a></button>
+            <div
+              class="relative w-[350px] h-[250px] bg-pink-600 rounded-b-lg flex justify-center items-center border-l-[175px] border-l-transparent border-r-[175px] border-r-transparent border-t-[100px] border-t-pink-400"
+            ></div>
+          </div>
         </div>
+      </div>
+
+      <div id="button wrapper" class="font-gloria flex flex-col gap-5">
+        <button
+          id="btnOpen"
+          class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold"
+        >
+          Open letter
+        </button>
+        <button
+          class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold"
+        >
+          <a href="/pages/musicPage.html">Next gift</a>
+        </button>
+      </div>
     </div>
     <script>
-       document.getElementById('btnOpen').onclick = () => {
-    const flap = document.getElementById('envelope-flap');
-    const letter = document.getElementById('letter');
-    // Toggle open state
-    const isOpen = flap.getAttribute("data-open") === "true";
-    if (isOpen) {
-        // Close the envelope
-        flap.style.transform = "rotateX(0deg)";
-        letter.style.transform = "translateY(120%)"; // Move letter back down
-        letter.style.opacity = "0"; // Hide letter smoothly
-        setTimeout(() => {
-            letter.style.zIndex = "0"; // Move letter behind the flap after animation
-        }, 500); // Ensure zIndex change happens after animation
-        flap.setAttribute("data-open", "false"); // Update state
-    } else {
-        // Open the envelope
-        flap.style.transform = "rotateX(180deg)";
-        letter.style.transform = "translateY(-20px)"; // Slide letter up
-        letter.style.opacity = "1"; // Show letter
-        letter.style.zIndex = "10"; // Bring letter to front
-        flap.setAttribute("data-open", "true"); // Update state
-    }
-};
+    document.getElementById("btnOpen").onclick = toggleLetter;
+document.getElementById("btnClose").onclick = toggleLetter;
+
+function toggleLetter() {
+  const flap = document.getElementById("envelope-flap");
+  const letter = document.getElementById("letter");
+
+  const isOpen = flap.getAttribute("data-open") === "true";
+
+  if (isOpen) {
+    // Close the envelope
+    flap.style.transform = "rotateX(0deg)";
+    letter.style.animation = "none";
+    letter.style.transform = "translateY(100%)";
+    letter.style.opacity = "0";
+    letter.style.maxHeight = "0";
+    letter.style.padding = "0";
+
+    setTimeout(() => {
+      letter.style.display = "none";
+      letter.style.zIndex = "0";
+    }, 500); // Wait for close animation to finish
+
+    flap.setAttribute("data-open", "false");
+  } else {
+    // Open the envelope
+    flap.style.transform = "rotateX(180deg)";
+
+    // First, keep letter hidden until the flap animation finishes
+    letter.style.display = "none";  
+    letter.style.opacity = "0";
+    letter.style.transform = "translateY(100%)"; // Hide below envelope
+
+    // Delay the letter appearance so it doesn't show before the flap moves
+    setTimeout(() => {
+      letter.style.display = "block"; // Make letter visible
+      letter.style.opacity = "1";
+      letter.style.zIndex = "10";
+      letter.style.maxHeight = "500px";
+      letter.style.padding = "1rem";
+      letter.style.transform = "translateY(20px)";
+
+      // Start smooth animation only after the letter is visible
+      setTimeout(() => {
+        letter.style.animation = "bounceIn 0.8s ease-out";
+        letter.style.transform = "translateY(0)";
+      }, 50);
+    }, 500); // Adjust this delay (500ms) to match the flap animation duration
+
+    flap.setAttribute("data-open", "true");
+  }
+}
     </script>
-</body>
+  </body>
 </html>

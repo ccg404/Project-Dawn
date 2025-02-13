@@ -11,29 +11,31 @@
 </head>
 <body>
     <!--TO DO:
-    Add a play button to the player and also create an animation where the disc is spinning as if its playing
+    Add audio
     -->
 
 
 
     <div class="bg-[url(/img/bg1.jpg)] object-cover h-screen flex flex-col items-center justify-center ">
-        <div class="mt-20 font-gloria p-10">
-            <h1 class="text-2xl leading-10">I think its best for u to use earpods or earphones when listening to this</h1>
+        <div class="mt-1 font-gloria p-10">
+            <h1 class="text-2xl leading-10 font-bold">I think its best for u to use earpods or earphones when listening to this</h1>
             <div class="music-player">
                     <div class="left">
                             <div class="circle"></div>
-                            <div class="cd">
+                            <div class="cd " id="cd">
                                 <div class="cd-right"></div>
                                 <div class="cd-right-small"></div>
                                 <div class="cd-left"></div>
                                 <div class="cd-left-small"></div>
                                 <div class="cd-circle"></div>
-                                <hr>
-                                <hr>
+                            </div>
+                            <div class="flex flex-row justify-center items-center mt-3">
+                                <hr class="w-[48px] inline-block h-[5px] bg-black rounded-[5px] mr-5">
+                                <hr class="w-[48px] inline-block h-[5px] bg-black rounded-[5px] ">
                             </div>
                     </div>
                     <div class="right">
-                        <div class="player">
+                        <div class="player " id="player">
                             <div class="p-circle"></div>
                             <hr class="first">
                             <hr class="secound">
@@ -48,9 +50,19 @@
                         <div class="mora"></div>
                     </div>
                 </div>
-        </div>
+            </div>
+            <div class="m-2 flex flex-row gap-10 font-gloria">
+                <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn1">Play Song</button>
+            </div>
     </div>
     <script>
+        let cd = document.getElementById('cd');
+        let player = document.getElementById('player');
+        const toggleAnimation = document.getElementById('btn1').onclick = () => {
+            //To toggle an animation from the css file
+            cd.classList.toggle('animate-spin');
+            player.classList.toggle('play');
+        }
     </script>
 </body>
 </html>
