@@ -841,6 +841,9 @@
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1570,6 +1573,9 @@
   }
   .bg-\[url\(\/img\/bg1\.jpg\)\] {
     background-image: url(/img/bg1.jpg);
+  }
+  .bg-\[url\(img\/bg1\.jpg\)\] {
+    background-image: url(img/bg1.jpg);
   }
   .bg-none {
     background-image: none;
