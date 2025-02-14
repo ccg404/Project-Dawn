@@ -841,14 +841,26 @@
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-\[48px\] {
     width: 48px;
   }
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[30px\] {
+    width: 30px;
+  }
   .w-\[250px\] {
     width: 250px;
+  }
+  .w-\[320px\] {
+    width: 320px;
   }
   .w-\[350px\] {
     width: 350px;
@@ -1463,17 +1475,41 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 100px;
   }
+  .border-t-\[130px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 130px;
+  }
   .border-t-\[135px\] {
     border-top-style: var(--tw-border-style);
     border-top-width: 135px;
+  }
+  .border-t-\[13px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 13px;
+  }
+  .border-t-\[150px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 150px;
+  }
+  .border-t-\[160px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 160px;
   }
   .border-r {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
   }
+  .border-r-\[170px\] {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 170px;
+  }
   .border-r-\[175px\] {
     border-right-style: var(--tw-border-style);
     border-right-width: 175px;
+  }
+  .border-r-\[190px\] {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 190px;
   }
   .border-b {
     border-bottom-style: var(--tw-border-style);
@@ -1483,9 +1519,29 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
   }
+  .border-l-\[150px\] {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 150px;
+  }
+  .border-l-\[160px\] {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 160px;
+  }
+  .border-l-\[165px\] {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 165px;
+  }
+  .border-l-\[170px\] {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 170px;
+  }
   .border-l-\[175px\] {
     border-left-style: var(--tw-border-style);
     border-left-width: 175px;
+  }
+  .border-l-\[180px\] {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 180px;
   }
   .border-dashed {
     --tw-border-style: dashed;
