@@ -23,21 +23,39 @@
             to my mind
           </p>
         </div>
+        <div class="">
+          <audio src="/audio/An Art Gallery Could Never Be As Unique As You.mp3" id="song"></audio>
+        </div>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/track/22Nd3GuO7sHopPjdKccRcq?utm_source=generator"
+          width="80%"
+          height="160"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          class="lg:w-[150px]"
+        ></iframe>
       </div>
-      <iframe
-        style="border-radius: 12px"
-        src="https://open.spotify.com/embed/track/22Nd3GuO7sHopPjdKccRcq?utm_source=generator"
-        width="80%"
-        height="160"
-        frameborder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      ></iframe>
-      <div class="m-10 flex flex-row gap-10 font-gloria">
-        <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn1"><a href="vhsPage.html">Next Gift</a></button>
+      <div class="m-10 flex flex-col gap-10 font-gloria">
+        <div class="flex flex-row items-center justify-center gap-5">
+          <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn1">Play???</button>
+          <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn2">Pause???</button>
+        </div>
+        <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" ><a href="vhsPage.html">Next Gift</a></button>
     </div>
     </div>
-    <script></script>
+    <script>
+       const playBtn = document.getElementById('btn1').onclick = () => {
+        let audio = document.getElementById('song');
+        audio.play();
+       }
+
+       const pauseBtn = document.getElementById('btn2').onclick = () => {
+        let audio = document.getElementById('song');
+        audio.pause();
+       }
+    </script>
   </body>
 </html>
