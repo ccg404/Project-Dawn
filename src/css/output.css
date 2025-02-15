@@ -2445,9 +2445,49 @@
   .transform-view {
     transform-box: view-box;
   }
+  .sm\:mt-52 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 52);
+    }
+  }
+  .lg\:mt-6 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
+  .lg\:mt-64 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 64);
+    }
+  }
+  .lg\:mt-72 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 72);
+    }
+  }
+  .lg\:mt-96 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 96);
+    }
+  }
   .lg\:w-\[150px\] {
     @media (width >= 64rem) {
       width: 150px;
+    }
+  }
+  .xl\:mt-1 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 1);
+    }
+  }
+  .xl\:mt-9 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 9);
+    }
+  }
+  .xl\:mt-96 {
+    @media (width >= 80rem) {
+      margin-top: calc(var(--spacing) * 96);
     }
   }
 }
