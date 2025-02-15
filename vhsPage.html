@@ -17,9 +17,10 @@
 
 
     <div class="bg-[url(/img/bg1.jpg)] object-cover h-screen flex flex-col items-center justify-center ">
-        <div class="mt-1 font-gloria p-10">
-            <h1 class="text-2xl leading-10 font-bold">I think its best for u to use earpods or earphones when listening to this</h1>
+        <div class="-mt-10 font-gloria p-10">
+            <h1 class="text-2xl leading-10 font-bold">This is my last gift for u <br>I think its best for u to use earpods or earphones when listening to this...</h1>
             <div class="music-player">
+                <audio src="/audio/forher.mp4" id="voice"></audio>
                     <div class="left">
                             <div class="circle"></div>
                             <div class="cd " id="cd">
@@ -51,18 +52,27 @@
                     </div>
                 </div>
             </div>
-            <div class="m-2 flex flex-row gap-10 font-gloria">
+            <div class="-mt-10 flex flex-col gap-2 font-gloria">
                 <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn1">Play Song</button>
+                <button class="px-5 py-3 border-2 border-black rounded-lg shadow-2xl text-xl font-bold" id="btn2">Pause kay CRINGE</button>
             </div>
     </div>
     <script>
         let cd = document.getElementById('cd');
         let player = document.getElementById('player');
+        let audio = document.getElementById('voice');
         const toggleAnimation = document.getElementById('btn1').onclick = () => {
             //To toggle an animation from the css file
             cd.classList.toggle('animate-spin');
             player.classList.toggle('play');
+            audio.play()
         }
+
+       const pauseBtn = document.getElementById('btn2').onclick = () => {
+        audio.pause();
+        cd.classList.remove('animate-spin');
+    player.classList.remove('play');
+       }
     </script>
 </body>
 </html>
